@@ -10,8 +10,21 @@ HKZ = Client(
 @HKZ.on_message(filters.command("start"))
 async def start(client, message):
     await message.reply(
-        text="Hello"
+        text=f"""Hey there {message.from_user.mention} 👋,
+
+I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayalam Dubbed Hollywood Movies. Just Send Me the Movie Name you want 😍
+
+Hit /help to know more ✨"""
     )
+
+@HKZ.on_message(filters.command("help"))
+async def help(client, message):
+    await message.reply(
+        text=f"""Hey {message.from_user.mention} ✨
+
+Basic Commands:
+/start - Check I am Alive ☑
+/help  - To Reach Here
 
 print("Bot Started")
 HKZ.run()
