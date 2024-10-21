@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 HKZ = Client(
   name="Elizabeth-Olsen",
@@ -25,6 +26,32 @@ async def help(client, message):
 Basic Commands:
 /start - Check I am Alive ☑
 /help  - To Reach Here
+/about - About Me 🤠
+/list  - Check the Movies I have
+
+Instructions:
+
+When you will request the Movie You want to login with your Telegram Phone Number.
+
+Then You will Receive a Code from Telegram, Just Send the Code to Me.
+
+After Login The Movie File will be upload in your Telegram Saved Messages.
+
+Note:- You Can request only 2 Movies Per Week..!
+If the Movie didn't got please request Again..!"""
+    )
+
+@HKZ.on_message(filters.command("about"))
+async def about(client, message):
+    await message.reply(
+        text=f"""Hey {message.from_user.mention} ✨
+
+✰ My Name  : [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot]
+✰ My Owner : [SOUL TG](www.github.com/SOULTG)
+✰ Language : [Python 3.13.0](www.python.org)
+✰ Library  : Pyrogram, Tgcrypto
+✰ Server   : [Render](www.render.com)"""
+    )
 
 print("Bot Started")
 HKZ.run()
