@@ -47,11 +47,54 @@ async def about(client, message):
         text=f"""Hey {message.from_user.mention} ✨
 
 ✰ My Name  : [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot]
-✰ My Owner : [SOUL TG](www.github.com/SOULTG)
 ✰ Language : [Python 3.13.0](www.python.org)
 ✰ Library  : Pyrogram, Tgcrypto
 ✰ Server   : [Render](www.render.com)"""
     )
+
+
+
+@HKZ.on_message(filters.text)
+async def titanic_txt(client, message):
+    await message.reply(
+        text=f"<b>Here is What I Found for Your Query #{message.text}</b>..!",
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton(f"<b>{message.text}</b> Malayalam Dubbed Full Movie @HollywoodMalayalamMovieBot.mkv</b>", callback_data="mission")
+            ]]
+            )
+        )
+
+@HKZ.on_message(filters.text)
+async def robbhood_txt(client, message):
+    await message.reply(
+        text=f"<b>Here is What I Found for Your Query #{message.text}</b>..!",
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton(f"<b>{message.text} Malayalam Dubbed Full Movie @HollywoodMalayalamMovieBot.mkv</b>", callback_data="mission")
+            ]]
+            )
+        )
+
+@HKZ.on_message(filters.text)
+async def natm_txt(client, message):
+    await message.reply(
+        text=f"<b>Here is What I Found for Your Query #{message.text}</b>..!",
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton(f"<b>{message.text} Malayalam Dubbed Full Movie @HollywoodMalayalamMovieBot.mkv</b>", callback_data="mission")
+            ]]
+            )
+        )
+    
+
+@HKZ.on_message(filters.text)
+async def iceage_txt(client, message):
+    await message.reply(
+        text=f"<b>Here is What I Found for Your Query #{message.text}</b>..!",
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton(f"<b>{message.text} Malayalam Dubbed Full Movie @HollywoodMalayalamMovieBot.mkv</b>", callback_data="mission")
+            ]]
+            )
+        )
+
 
 print("Bot Started")
 HKZ.run()
