@@ -92,8 +92,7 @@ async def iceage_txt(client, message):
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton(f"<b>{message.text} Malayalam Dubbed Full Movie @HollywoodMalayalamMovieBot.mkv</b>", callback_data="mission")
             ]]
-            )
-        )
+    )
 
 
 print("Bot Started")
