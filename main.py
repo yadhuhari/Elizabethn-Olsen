@@ -192,7 +192,7 @@ I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayala
 Hit /help to know more ✨"""
         )
     elif msg.data == "help":
-        await msg.message.edit_text(f"""Hey {message.from_user.mention} ✨
+        await msg.message.edit_text(f"""Hey {msg.from_user.mention} ✨
 
 Basic Commands:
 /start - Check I am Alive ☑
@@ -212,7 +212,7 @@ Note:- You Can request only 2 Movies Per Week..!
 If the Movie didn't got please request Again..!"""
         )
     elif msg.data == "about":
-        await msg.message.edit_text(f"""Hey {message.from_user.mention} ✨
+        await msg.message.edit_text(f"""Hey {msg.from_user.mention} ✨
 
 ✰ My Name  : [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot)
 ✰ My Owner : [SOUL TG](www.github.com/SOULTG)
