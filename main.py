@@ -15,7 +15,9 @@ async def start(client, message):
 
 I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayalam Dubbed Hollywood Movies. Just Click in the Movies List Button and Choose the Movie you want 😍
 
-Hit /help to know more ✨""",
+Hit /help to know more ✨
+
+[Note if the 'Movies List 🌼' Button is not working please hit /list'""",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Movies List 🌼", callback_data="list"),
             ],[
@@ -164,7 +166,7 @@ async def callback(bot, msg):
 𝖤𝗇𝗍𝖾𝗋 𝗍𝗁𝖾 𝗉𝗁𝗈𝗇𝖾 𝗇𝗎𝗆𝖻𝖾𝗋, 𝖺𝗅𝗈𝗇𝗀 𝗐𝗂𝗍𝗁 𝖼𝗈𝗎𝗇𝗍𝗋𝗒 𝖼𝗈𝖽𝖾. 𝖤𝗑𝖺𝗆𝗉𝗅𝖾: +91876543210"""
         )
     elif msg.data == "start":
-        await msg.message.edit_text(f"""Hey there {message.from_user.mention} 👋,
+        await msg.message.edit_text(f"""Hey there {msg.from_user.mention} 👋,
 
 I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayalam Dubbed Hollywood Movies. Just Send Me the Movie Name you want 😍
 
