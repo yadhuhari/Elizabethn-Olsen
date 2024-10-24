@@ -13,10 +13,12 @@ async def start(client, message):
     await message.reply(
         text=f"""Hey there {message.from_user.mention} 👋,
 
-I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayalam Dubbed Hollywood Movies. Just Send Me the Movie Name you want 😍
+I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayalam Dubbed Hollywood Movies. Just Click in the Movies List Button and Choose the Movie you want 😍
 
 Hit /help to know more ✨""",
         reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("Movies List 🌼", callback_data="list"),
+            ],[
             InlineKeyboardButton("Help 🛠", callback_data="help"),
             InlineKeyboardButton("About 🤠", callback_data="about")
             ]]
@@ -45,6 +47,8 @@ After Login The Movie File will be upload in your Telegram Saved Messages.
 Note:- You Can request only 2 Movies Per Week..!
 If the Movie didn't got please request Again..!""",
         reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("Movies List 🌼", callback_data="list"),
+            ],[
             InlineKeyboardButton("Home 🏡", callback_data="start"),
             InlineKeyboardButton("About 🤠", callback_data="about")
             ]]
@@ -69,25 +73,6 @@ async def about(client, message):
 
 
 
-@HKZ.on_message(filters.text)
-async def titanic_txt(client, message):
-    await message.reply(
-        text=f"<b>Here is What I Found for Your Query #{message.text}</b>..!",
-        reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton(text=f"<b>{message.text} Malayalam Dubbed Full Movie @HollywoodMalayalamMovieBot.mkv</b>", callback_data="mission")
-            ]]
-            )
-        )
-
-@HKZ.on_message(filters.text)
-async def iceage_txt(client, message):
-    await message.reply(
-        text=f"<b>Here is What I Found for Your Query #{message.text}</b>..!",
-        reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton(text=f"<b>{message.text} Malayalam Dubbed Full Movie @HollywoodMalayalamMovieBot.mkv</b>", callback_data="mission")
-            ]]
-            )
-        )
 
 @HKZ.on_message(filters.text)
 async def natm_txt(client, message):
@@ -99,83 +84,39 @@ async def natm_txt(client, message):
             )
         )
 
-
-
-
 @HKZ.on_message(filters.command("list"))
 async def list(client, message):
     await message.reply(
         text="""Here is the List of Movies I have..!
-➖➖➖➖➖➖➖➖➖➖
 
-300
-2012
-Agent Cody Banks
-Avengers Infinity War
-Anaconda
-Anacondas: The Hunt for the Blood Orchid Anacondas: Trail of Blood
-Ben-Hur (1959)
-Ben-Hur 2016
-Black Widow
-Captain Phillips
-CZ12 Chinese Zodiac
-Die Another Day
-Die Hard
-Django Unchained
-Doctor Strange in the Multiverse of Madness
-Exodus Gods and Kings
-Fantastic Four
-Godzilla
-Ghost Rider
-Gorgeous
-Hollow Man
-Home Alone 2: Lost in New York
-Hotel Transylvania
-Ice Age
-Jack the Giant Slayer
-Jumanji
-Jumanji: Welcome to the Jungle
-Jumanji: The Next Level 
-Jurassic Park
-Jurassic World Dominion
-King Kong
-Man of Steel
-Men in Black
-Men in Black 2
-Men in Black International
-Monster House
-Night at the Museum
-Pacific Rim
-Passion of the Christ
-Spider-Man
-Spider-Man 2
-Spider-Man 3
-Spider-Man: Homecoming
-Spider-Man: Far From Home
-Spider-Man: No Way Home
-Stuart Little 2
-Stuart Little 3: Call of the Wild
-The Adventures of Tintin: The Secret of the Unicorn
-The Amazing Spider-Man
-The Amazing Spider-Man 2
-The Angry Birds
-The Angry Birds 2
-The Conjuring
-The Da Vinci Code
-The Hangover
-The Incredible Hulk
-The Matrix
-The Mummy Rebirth
-The Smurfs
-The Smurfs 2
-Titanic
-Uncharted
-Van Helsing
-Venom
-Venom: Let there be Carnage
-
-Note:- You can only request 2 Movies in a week..!"""
-    )
+Note:- You can only request 2 Movies in a week..!""",
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("300", callback_data="300"),
+            InlineKeyboardButton("2012", callback_data="2012"),
+            ],[
+            InlineKeyboardButton("Agent Cody Banks", callback_data="agentcodybanks"),
+            InlineKeyboardButton("Avengers Infinity War", callback_data="avengers"),
+            ],[
+            InlineKeyboardButton("Anaconda", callback_data="anaconda"),
+            InlineKeyboardButton("Anaconda 2", callback_data="anaconda2"),
+            ],[
+            InlineKeyboardButton("Anaconda 3", callback_data="anaconda3"),
+            InlineKeyboardButton("Ben Hur (1959)", callback_data="benhur1"),
+            ],[
+            InlineKeyboardButton("Ben Hur (2016)", callback_data="benhur2"),
+            InlineKeyboardButton("Black Widow", callback_data="blackwidow"),
+            ],[
+            InlineKeyboardButton("Captain Phillips", callback_data="captainphilips"),
+            InlineKeyboardButton("CZ12", callback_data="cz12"),
+            ],[
+            InlineKeyboardButton("Die Another Day", callback_data="dieanotherday"),
+            InlineKeyboardButton("Die Hard", callback_data="diehard"),
+            ],[
+            InlineKeyboardButton("Django Unchained", callback_data="djangounchained"),
+            InlineKeyboardButton("Doctor Strange 2", callback_data="drstrange2"),
+            ],[
+          
+        )
 
 @HKZ.on_callback_query()
 async def callback(bot, msg):
