@@ -17,7 +17,7 @@ I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayala
 
 Hit /help to know more ✨
 
-```Note if the 'Movies List 🌼' Button is not working please hit /list..!```""",
+Note if the 'Movies List 🌼' Button is not working please hit /list..!""",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Movies List 🌼", callback_data="list"),
             ],[
