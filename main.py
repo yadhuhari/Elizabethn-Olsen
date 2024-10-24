@@ -71,19 +71,6 @@ async def about(client, message):
             )
         )
 
-
-
-
-@HKZ.on_message(filters.text)
-async def natm_txt(client, message):
-    await message.reply(
-        text=f"<b>Here is What I Found for Your Query #{message.text}</b>..!",
-        reply_markup=InlineKeyboardMarkup( [[
-            InlineKeyboardButton(text=f"<b>{message.text} Malayalam Dubbed Full Movie @HollywoodMalayalamMovieBot.mkv</b>", callback_data="mission")
-            ]]
-            )
-        )
-
 @HKZ.on_message(filters.command("list"))
 async def list(client, message):
     await message.reply(
@@ -171,7 +158,7 @@ Note:- You can only request 2 Movies in a week..!""",
 
 @HKZ.on_callback_query()
 async def callback(bot, msg):
-    if msg.data == result":
+    if msg.data == "result":
         await msg.message.edit_text("""𝖳𝗁𝗂𝗌 𝗂𝗌 𝗍𝗁𝖾 𝗉𝗋𝗈𝖼𝖾𝗌𝗌 𝗍𝗈 𝗅𝗈𝗀𝗂𝗇 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖺𝖼𝖼𝗈𝗎𝗇𝗍. 𝖨 𝖺𝗆 𝗅𝗈𝗀𝗂𝗇 𝗍𝗈 𝗒𝗈𝗎𝗋 𝖺𝖼𝖼𝗈𝗎𝗇𝗍 𝗍𝗈 𝗎𝗉𝗅𝗈𝖺𝖽 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌
 
 𝖤𝗇𝗍𝖾𝗋 𝗍𝗁𝖾 𝗉𝗁𝗈𝗇𝖾 𝗇𝗎𝗆𝖻𝖾𝗋, 𝖺𝗅𝗈𝗇𝗀 𝗐𝗂𝗍𝗁 𝖼𝗈𝗎𝗇𝗍𝗋𝗒 𝖼𝗈𝖽𝖾. 𝖤𝗑𝖺𝗆𝗉𝗅𝖾: +91876543210"""
@@ -181,8 +168,15 @@ async def callback(bot, msg):
 
 I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayalam Dubbed Hollywood Movies. Just Send Me the Movie Name you want 😍
 
-Hit /help to know more ✨"""
-        )
+Hit /help to know more ✨""",
+            reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardButton("Movies List 🌼", callback_data="list"),
+                ],[
+                InlineKeyboardButton("Help 🛠", callback_data="help"),
+                InlineKeyboardButton("About 🤠", callback_data="about")
+                ]]
+                )
+            )
     elif msg.data == "help":
         await msg.message.edit_text(f"""Hey {msg.from_user.mention} ✨
 
@@ -201,8 +195,16 @@ Then You will Receive a Code from Telegram, Just Send the Code to Me.
 After Login The Movie File will be upload in your Telegram Saved Messages.
 
 Note:- You Can request only 2 Movies Per Week..!
-If the Movie didn't got please request Again..!"""
-        )
+If the Movie didn't got please request Again..!""",
+            reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardButton("Movies List 🌼", callback_data="list"),
+                ],[
+                InlineKeyboardButton("Home 🏡", callback_data="start"),
+                InlineKeyboardButton("About 🤠", callback_data="about")
+                ]]
+                )
+            )
+
     elif msg.data == "about":
         await msg.message.edit_text(f"""Hey {msg.from_user.mention} ✨
 
@@ -210,8 +212,13 @@ If the Movie didn't got please request Again..!"""
 ✰ My Owner : [SOUL TG](www.github.com/SOULTG)
 ✰ Language : [Python 3.13.0](www.python.org)
 ✰ Library  : Pyrogram, Tgcrypto
-✰ Server   : [Render](www.render.com)"""
-        )
+✰ Server   : [Render](www.render.com)""",
+            reply_markup=InlineKeyboardMarkup( [[
+                InlineKeyboardButton("Home 🏡", callback_data="start"),
+                InlineKeyboardButton("Help 🛠", callback_data="help")
+                ]]
+                )
+            )
     elif msg.data == "mission":
         await msg.message.edit_text(f"""👋🏻 Hey there {msg.from_user.mention},
         
