@@ -115,7 +115,48 @@ Note:- You can only request 2 Movies in a week..!""",
             InlineKeyboardButton("Django Unchained", callback_data="djangounchained"),
             InlineKeyboardButton("Doctor Strange 2", callback_data="drstrange2"),
             ],[
+            InlineKeyboardButton("Exodus Gods and Kings", callback_data="exodus"),
+            InlineKeyboardButton("Ghost Rider", callback_data="ghostrider"),
+            ],[
+            InlineKeyboardButton("Godzilla", callback_data="godzilla"),
+            InlineKeyboardButton("Home Alone 2", callback_data="homealone"),
+            ],[
+            InlineKeyboardButton("Hotel Transylvania", callback_data="300"),
+            InlineKeyboardButton("Ice Age", callback_data="iceage"),
+            ],[
+            InlineKeyboardButton("Jack the Giant Slayer", callback_data="jack"),
+            InlineKeyboardButton("Jumanji", callback_data="jumanji"),
+            ],[
+            InlineKeyboardButton("Jumanji 2", callback_data="jumanji2"),
+            InlineKeyboardButton("Jumanji 3", callback_data="jumanji3"),
+            ],[
+            InlineKeyboardButton("Jurassic Park", callback_data="jurassicpark"),
+            InlineKeyboardButton("Jurassic World Dominion", callback_data="jurassiworld"),
+            ],[
+            InlineKeyboardButton("King Kong", callback_data="kingkong"),
+            InlineKeyboardButton("Man of Steel", callback_data="manofsteel"),
+            ],[
+            InlineKeyboardButton("Men in Black", callback_data="mib"),
+            InlineKeyboardButton("Men in Black 2", callback_data="mib2"),
+            ],[
+            InlineKeyboardButton("MIB International", callback_data="mibinternational"),
+            InlineKeyboardButton("Monster House", callback_data="monsterhouse"),
+            ],[
+            InlineKeyboardButton("Night at the Museum", callback_data="natm"),
+            ],[
+            InlineKeyboardButton("Pacific Rim", callback_data="pacificrim"),
+            ],[
+            InlineKeyboardButton("Rob B Hood", callback_data="robbhood"),
+            ],[
+            InlineKeyboardButton("Spiderman Series", callback_data="spiderman"),
+            ],[
+            InlineKeyboardButton("Stuart Little 2", callback_data="stuartlittle"),
+            ],[
+            InlineKeyboardButton("The Adventures of Tintin", callback_data="tintin"),
+            ],[
+            InlineKeyboardButton("Titanic", callback_data="titanic"),
           
+
         )
 
 @HKZ.on_callback_query()
