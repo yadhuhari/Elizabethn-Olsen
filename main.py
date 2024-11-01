@@ -5,15 +5,25 @@ HKZ = Client(
   name="Elizabeth-Olsen",
   api_id="25988816",
   api_hash="7ad4c2b1e5556277d341477b0776b2de",
-  bot_token="8127557975:AAGcuavIDOjKQcMpS6VqjkBENh6IT6JLwD0"
+  bot_token="8143055159:AAHTGAB-9GGTQzP9QqJjOj4rxoxtyWqoOTc"
 )
+
+PICS = [
+ "http://ibb.co/1vz7xVL",
+ "http://ibb.co/9GQQ1Bq",
+ "http://ibb.co/TwwHD4p",
+ "http://ibb.co/qpWn3Zc",
+ "http://ibb.co/SX96M2s",
+ "http://ibb.co/TP14McC"
+]
 
 @HKZ.on_message(filters.command("start"))
 async def start(client, message):
-    await message.reply(
-        text=f"""Hey there {message.from_user.mention} 👋,
+    await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=f"""Hey there {message.from_user.mention} 👋,
 
-I am [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot),I can share you Malayalam Dubbed Hollywood Movies. Just Click in the Movies List Button and Choose the Movie you want 😍
+I am [𝗦𝗔𝗠𝗔𝗡𝗧𝗛𝗔](t.me/HollywoodMalayalamMovieBot),I can share you Malayalam Dubbed Hollywood Movies. Just Click in the Movies List Button and Choose the Movie you want 😍
 
 Hit /help to know more ✨
 
@@ -29,8 +39,9 @@ Note if the 'Movies List 🌼' Button is not working please hit /list..!""",
 
 @HKZ.on_message(filters.command("help"))
 async def help(client, message):
-    await message.reply(
-        text=f"""Hey {message.from_user.mention} ✨
+    await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=f"""Hey {message.from_user.mention} ✨
 
 Basic Commands:
 /start - Check I am Alive ☑
@@ -59,12 +70,13 @@ If the Movie didn't got please request Again..!""",
 
 @HKZ.on_message(filters.command("about"))
 async def about(client, message):
-    await message.reply(
-        text=f"""Hey {message.from_user.mention} ✨
+    await message.reply_photo(
+        photo=random.choice(PICS),
+        caption=f"""Hey {message.from_user.mention} ✨
 
-✰ My Name  : [Elizabeth Olsen](t.me/HollywoodMalayalamMovieBot)
+✰ My Name  : [𝗦𝗔𝗠𝗔𝗡𝗧𝗛𝗔](t.me/HollywoodMalayalamMovieBot)
 ✰ Language : [Python 3.13.0](www.python.org)
-✰ Library  : Pyrogram, Tgcrypto
+✰ Library  : [Pyrogram](https://docs.pyrogram.org/)
 ✰ Server   : [Render](www.render.com)""",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Home 🏡", callback_data="start"),
@@ -95,7 +107,6 @@ Note:- You can only request 2 Movies in a week..!""",
             InlineKeyboardButton("Ben Hur (2016)", callback_data="mission"),
             InlineKeyboardButton("Black Widow", callback_data="mission"),
             ],[
-            InlineKeyboardButton("Captain Phillips", callback_data="captainphilips"),
             InlineKeyboardButton("CZ12", callback_data="mission"),
             ],[
             InlineKeyboardButton("Die Another Day", callback_data="mission"),
