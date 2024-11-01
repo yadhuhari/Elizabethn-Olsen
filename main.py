@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+import random
 
 HKZ = Client(
   name="Elizabeth-Olsen",
